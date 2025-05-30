@@ -22,7 +22,7 @@ O grupo investigou como o senso comum pode influenciar práticas relacionadas à
 
 **Débora Queiroz**
 
----------------------
+---
 
 📍 **ETEC de Santa Isabel**  
 📅 **Ano letivo: 2025**  
