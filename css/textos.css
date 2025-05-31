@@ -1,3 +1,6 @@
+.texto-explicativo{
+    text-align: center;
+}
 .texto-explicativo h1 {
     text-transform: uppercase;
     font-weight: 500;
