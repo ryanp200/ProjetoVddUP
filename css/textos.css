@@ -1,0 +1,14 @@
+.texto-explicativo h1 {
+    text-transform: uppercase;
+    font-weight: 500;
+    color: rgb(44, 63, 40);
+    font-size: 2vw;
+}
+.texto-explicativo p {
+    color: rgb(46, 49, 46);
+    line-height: 150%;
+    margin: 1.5vw 1vw;
+    font-size: 1.3vw;
+    text-align: justify;
+    text-indent: 2em;
+}
