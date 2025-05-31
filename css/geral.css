@@ -50,7 +50,7 @@ nav li:hover{
    text-underline-offset: 25%; 
 }
 .pagina {
-    padding: 5% 8%;
+    padding: 5vw 8vw;
     grid-area: pagina;
 }
 footer {
@@ -99,62 +99,24 @@ footer {
 }
 
 @media (max-width: 900px) {
-    body {
-        grid-template-rows: 60px auto 140px;
-    }
-    nav {
-        padding: 12px 3vw;
-    }
     nav img {
-        width: 40px;
-    }
-    .pagina {
-        padding: 30px 4vw;
-    }
-    .rodape {
-        padding: 30px 10px;
-    }
-    .logo-rodape {
-        width: 40px;
-    }
-}
-
-@media (max-width: 600px) {
-    body {
-        grid-template-rows: 56px auto 120px;
-    }
-    nav {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 10px 2vw;
-    }
-    nav img {
-        width: 36px;
-        margin-bottom: 8px;
+        width: 8%;
     }
     nav ul {
-        gap: 18px;
-        flex-direction: column;
-        width: 100%;
-        align-items: flex-start;
-    }
-    nav li {
-        padding: 0;
+        gap: 5%;
     }
     .pagina {
-        padding: 18px 2vw;
-    }
-    .rodape {
-        padding: 18px 5px;
-        font-size: 0.95rem;
-    }
-    .logo-rodape {
-        width: 32px;
-        margin-bottom: 12px;
-    }
-    .links-rodape a {
-        margin: 0 6px;
-        font-size: 0.98rem;
+        padding: 3vw 2vw;
     }
 }
-
+@media (max-width: 600px) {
+    nav img {
+        width: 10%;
+    }
+    nav ul {
+        gap: 3%;
+    }
+    .pagina {
+        padding: 3vw 2vw;
+    }
+}
