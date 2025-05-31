@@ -23,3 +23,33 @@
     color: rgb(46, 49, 46);
     list-style-type: disc;
 }
+
+@media (max-width: 1200px) {
+    .texto-explicativo h1 {
+        font-size: 5vw;
+    }
+    .texto-explicativo p {
+        font-size: 3.5vw;
+        margin: 3vw 2vw;
+    }
+    .texto-explicativo ul {
+        font-size: 3vw;
+        margin: 3vw 4vw;
+        padding-left: 1em;
+    }
+}
+@media (max-width: 600px) {
+    .texto-explicativo h1 {
+        font-size: 7vw;
+    }
+    .texto-explicativo p {
+        font-size: 4.5vw;
+        margin: 4vw 2vw;
+        text-indent: 1em;
+    }
+    .texto-explicativo ul {
+        font-size: 4vw;
+        margin: 4vw 2vw;
+        padding-left: 0.8em;
+    }
+}
