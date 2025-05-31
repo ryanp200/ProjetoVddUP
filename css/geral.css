@@ -40,15 +40,54 @@ nav ul{
 nav li{
     padding: 0 4%;
 }
-nav a{
+nav a, span{
     text-decoration: none;
     color: #dbdbdb;
     text-transform: uppercase;
 }
-nav li:hover{
+nav > ul > li > a:hover{
    text-decoration:underline #dbdbdb;
    text-underline-offset: 25%; 
 }
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: block;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    pointer-events: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgb(61, 87, 56);
+    list-style: none;
+    padding: 10px 0;
+    margin: 0;
+    border-radius: 4px;
+    min-width: 180px;
+    z-index: 1000;
+}
+.dropdown-menu li {
+    font-size: 0.85vw;
+    padding: 5% 5%;
+    transition: 0.3s ease;
+}
+.dropdown-menu li:hover {
+    background-color: rgb(44, 61, 40);
+}
+
+.dropdown:hover .dropdown-menu,
+.dropdown.active .dropdown-menu {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+
 .pagina {
     padding: 5vw 8vw;
     grid-area: pagina;

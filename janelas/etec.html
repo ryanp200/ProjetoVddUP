@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>LabMIS</title>
+    <link rel="stylesheet" href="../css/geral.css"/>
+    <link rel="stylesheet" href="../css/textos.css"/>
+    <link rel="icon" href="../img/logoTopo.png" />
+    <style>
+        .pagina {
+            padding: 0;
+        }
+
+        .banner-container {
+            position: relative;
+            width: 100%;
+            height: 25vw;
+            overflow: hidden;
+        }
+
+        .banner-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+            z-index: 0;
+        }
+
+        .banner-img.active {
+            opacity: 1;
+            z-index: 1;
+        }
+        #conteudo-pagina {
+            padding: 2% 25%;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <img src="../img/logo.png"/>
+        <ul>
+            <li><a href="../index.html">Início</a></li>
+            <li class="dropdown">
+                <span style="color:#fff;text-underline-offset: 25%;font-weight: 500;">Projeto</span>
+                <ul class="dropdown-menu">
+                    <li><a href="projeto.html">Sobre o Projeto</a></li>
+                    <li><a href="etec.html" style="color:#fff;font-weight: 500;">Etec Santa Isabel</a></li>
+                </ul>
+            </li>
+            <li><a href="algo.html">Jogo</a></li>
+            <li><a href="algo.html">Criadores</a></li>
+        </ul>
+    </nav>
+    <section class="pagina">
+        <section class="texto-explicativo">
+            <header id="cabecalho">
+                <section class="banner-container">
+                    <img class="banner-img active" src="../img/etec/etec-santa-isabel.jpg" alt="Banner 1">
+                    <img class="banner-img" src="../img/etec/etec2.webp" alt="Banner 2">
+                    <img class="banner-img" src="../img/etec/etec3.webp" alt="Banner 3">
+                </section>
+                <h1>Etec Santa Isabel</h1>
+            </header>
+            <section id="conteudo-pagina">
+                <p>
+                    A ETEC Santa Isabel é uma escola técnica pública vinculada ao Centro Paula Souza, órgão do Governo do Estado de São Paulo responsável pela educação profissional. A instituição oferece cursos técnicos integrados ao ensino médio, além de cursos técnicos subsequentes, voltados para a formação profissional em diversas áreas.
+                </p>
+                <p>
+                    A escola possui laboratórios, salas de aula equipadas e uma equipe de professores capacitados para atender às necessidades dos alunos. Os cursos são planejados para alinhar conhecimentos teóricos e práticos, preparando os estudantes para o mercado de trabalho e para continuidade dos estudos.
+                </p>
+                <p>
+                    Além das atividades curriculares, a ETEC Santa Isabel desenvolve projetos educacionais e programas de estágio que auxiliam na experiência prática dos alunos. A escola atende principalmente a região de Santa Isabel e cidades próximas, oferecendo ensino gratuito e acessível.
+                </p>
+
+
+                </p>
+            </section>
+        </section>
+    </section>
+
+    <footer class="rodape">
+        <section class="rodape-conteudo">
+            <img src="../img/logo.png" alt="Logo LabMIS" class="logo-rodape" />
+            <section class="links-rodape">
+                <a href="../index.html">Início</a>
+                <a href="algo.html">Projeto</a>
+                <a href="algo.html">Jogo</a>
+                <a href="algo.html">Criadores</a>
+            </section>
+            <p class="creditos">&copy; Projeto VddUP. Todos os direitos reservados.</p>
+        </section>
+    </footer>
+
+    <script>
+        const imagens = [
+            "../img/etec/etec-santa-isabel.jpg",
+            "../img/etec/etec2.webp",
+            "../img/etec/etec3.webp"
+        ];
+
+        const banners = document.querySelectorAll(".banner-img");
+        let index = 0;
+
+        setInterval(() => {
+            const current = banners[index % 2];
+            const next = banners[(index + 1) % 2];
+
+            next.src = imagens[(index + 1) % imagens.length];
+            next.classList.add("active");
+            current.classList.remove("active");
+
+            index = (index + 1) % imagens.length;
+        }, 5000);
+    </script>
+</body>
+</html>

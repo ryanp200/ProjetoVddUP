@@ -65,12 +65,16 @@
 </head>
 <body>
     <nav>
-        <img src="img/logo.png" />
+        <img src="img/logo.png"/>
         <ul>
-            <li>
-                <a href="index.html" style="color:#fff;text-decoration:underline;text-underline-offset: 25%;;">Início</a>
+            <li><a href="index.html" style="color:#fff;text-underline-offset: 25%;font-weight: 500;">Início</a></li>
+            <li class="dropdown">
+                <span >Projeto</span>
+                <ul class="dropdown-menu">
+                    <li><a href="janelas/projeto.html">Sobre o Projeto</a></li>
+                    <li><a href="janelas/etec.html">Etec Santa Isabel</a></li>
+                </ul>
             </li>
-            <li><a href="janelas/projeto.html">Projeto</a></li>
             <li><a href="algo.html">Jogo</a></li>
             <li><a href="algo.html">Criadores</a></li>
         </ul>
@@ -117,5 +121,7 @@
             );
         });
     </script>
+    <script src="menu-dropdown.js" defer></script>
+
 </body>
 </html>
