@@ -30,32 +30,32 @@
 
 @media (max-width: 900px) {
     .texto-explicativo h1 {
-        font-size: 3vw;
+        font-size: 1.7rem;
     }
     .texto-explicativo p {
-        font-size: 2.3vw;
-        margin: 5vw 1vw 1.5vw 1vw;
+        font-size: 1rem;
+        margin: 5vw 0.3vw 1.5vw 0.3vw;
         text-indent: 0;
         text-align: left;
     }
     .texto-explicativo ul {
-        font-size: 2vw;
+        font-size: 0.9rem;
         margin: 0 4vw 3vw 4vw;
         padding-left: 1em;
     }
 }
 @media (max-width: 600px) {
     .texto-explicativo h1 {
-        font-size: 3.7vw;
+        font-size: 2rem;
     }
     .texto-explicativo p {
-        font-size: 3.1vw;
-        margin: 7vw 1vw 1.5vw 1vw;
+        font-size: 1.125rem;
+        margin: 7vw 0.1vw 1.5vw 0.1vw;
         text-indent: 0;
         text-align: left;
     }
     .texto-explicativo ul {
-        font-size: 2.7vw;
+        font-size: 1rem;
         margin: 3vw 4vw;
         padding-left: 1em;
     }

@@ -44,17 +44,63 @@ nav a, nav span {
     text-decoration: none;
     color: #dbdbdb;
     text-transform: uppercase;
+    transition: 0.3s;
 }
-nav > ul > li > a:hover{
-   text-decoration:underline #dbdbdb;
-   text-underline-offset: 25%; 
+nav > ul li a:hover{
+    color: #ffffff;
+    text-decoration:underline #dbdbdb;
+    text-underline-offset: 25%; 
 }
 
+
+
+
 .dropdown {
+    display:none;
+}
+.dropdown button {
+    background-color: transparent;
+    border: none;
+    color: #dbdbdb;
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 0;
+    text-transform: uppercase;
+}
+.dropdown button:hover {
+    background-color: transparent;
+}
+.dropdown button:focus {
+    outline: none;
+}
+.btn, .btn-secondary, .dropdown-toggle, #dropdownMenuButton{
+    background-color: transparent;
+    box-shadow: none;
+    outline: none;
+}
+.dropdown-menu {
+    position: absolute;
+    translate: -120px;
+    height: 500px;
+    background-color: rgb(66, 99, 59);
+}
+.dropdown-menu a {
+    padding: 10px 16px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #dbdbdb;
+}
+.dropdown-menu a:hover {
+    background-color: rgb(44, 61, 40);
+    color: #ffffff;
+}
+
+
+.dropdown-projeto {
     position: relative;
 }
 
-.dropdown-menu {
+.dropdown-projeto-menu {
     display: block;
     opacity: 0;
     transform: translateY(-20px);
@@ -71,17 +117,17 @@ nav > ul > li > a:hover{
     min-width: 180px;
     z-index: 1000;
 }
-.dropdown-menu li {
+.dropdown-projeto-menu li {
     font-size: 0.85vw;
     padding: 5% 5%;
     transition: 0.3s ease;
 }
-.dropdown-menu li:hover {
+.dropdown-projeto-menu li:hover {
     background-color: rgb(44, 61, 40);
 }
 
-.dropdown:hover .dropdown-menu,
-.dropdown.active .dropdown-menu {
+.dropdown-projeto:hover .dropdown-projeto-menu,
+.dropdown-projeto.active .dropdown-projeto-menu {
     opacity: 1;
     transform: translateY(0);
     pointer-events: auto;
@@ -161,14 +207,8 @@ footer {
     nav img {
         width: 10%;
     }
-    #hamburguer {
-        display: block;
-    }
-    .menu-hamburguer{
+    .dropdown {
         display:flex;
-    }
-    .menu-hamburguer ul {
-        display: flex;
     }
     .nav-bar > ul{
         display:none;
