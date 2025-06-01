@@ -25,7 +25,6 @@
             cursor: pointer; 
         }
 
-        /* Animação do tremor */
         @keyframes shake {
             0%, 100% {
                 transform:rotate(0deg);
@@ -58,18 +57,17 @@
             }
             #logo {
                 width: 35vw;
-            }
-            
+            }    
         }
     </style>
 </head>
 <body>
-    <nav>
+    <nav class="nav-bar">
         <img src="img/logo.png"/>
         <ul>
             <li><a href="index.html" style="color:#fff;text-underline-offset: 25%;font-weight: 500;">Início</a></li>
             <li class="dropdown">
-                <span >Projeto</span>
+                <span>Projeto</span>
                 <ul class="dropdown-menu">
                     <li><a href="janelas/projeto.html">Sobre o Projeto</a></li>
                     <li><a href="janelas/etec.html">Etec Santa Isabel</a></li>
@@ -121,7 +119,6 @@
             );
         });
     </script>
-    <script src="menu-dropdown.js" defer></script>
-
+    <script src="js/menu-dropdown.js" defer></script>
 </body>
 </html>

@@ -11,7 +11,6 @@
         .pagina {
             padding: 0;
         }
-
         .banner-container {
             position: relative;
             width: 100%;
@@ -38,10 +37,16 @@
         #conteudo-pagina {
             padding: 2% 25%;
         }
+        #logo-santa-isabel {
+            width: 10vw;
+            height: auto;
+            float:calc(100% - 15vw);
+            margin: 0% 5% 5% 5%;
+        }
     </style>
 </head>
 <body>
-    <nav>
+    <nav class="nav-bar">
         <img src="../img/logo.png"/>
         <ul>
             <li><a href="../index.html">Início</a></li>
@@ -64,10 +69,10 @@
                     <img class="banner-img" src="../img/etec/etec2.webp" alt="Banner 2">
                     <img class="banner-img" src="../img/etec/etec3.webp" alt="Banner 3">
                 </section>
-                <h1>Etec Santa Isabel</h1>
+                <h1 style="margin-top:6vw;">Etec Santa Isabel</h1>
             </header>
             <section id="conteudo-pagina">
-                <p>
+                <p style="margin-top:-1.5vw;">
                     A ETEC Santa Isabel é uma escola técnica pública vinculada ao Centro Paula Souza, órgão do Governo do Estado de São Paulo responsável pela educação profissional. A instituição oferece cursos técnicos integrados ao ensino médio, além de cursos técnicos subsequentes, voltados para a formação profissional em diversas áreas.
                 </p>
                 <p>
@@ -76,9 +81,7 @@
                 <p>
                     Além das atividades curriculares, a ETEC Santa Isabel desenvolve projetos educacionais e programas de estágio que auxiliam na experiência prática dos alunos. A escola atende principalmente a região de Santa Isabel e cidades próximas, oferecendo ensino gratuito e acessível.
                 </p>
-
-
-                </p>
+                <img src="../img/etec/logo_etec_santa_isabel.png" alt="ETEC Santa Isabel"id="logo-santa-isabel" />
             </section>
         </section>
     </section>
@@ -117,5 +120,6 @@
             index = (index + 1) % imagens.length;
         }, 5000);
     </script>
+    <script src="../js/menu-dropdown.js" defer></script>
 </body>
 </html>

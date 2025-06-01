@@ -42,7 +42,21 @@
         #ods a:hover {
             text-decoration: underline;
         }
+        #primeiro-paragrafo {
+            display: flex;
+            align-items: start;
+            gap: 2vw;
+        }
+        #logo-texto {
+            float:left;
+            width: 20vw;
+            margin: 0 5%;
+            filter:drop-shadow(4px 4px 5px rgba(0, 0, 0, 0.3));
+        }
         @media (max-width: 900px) {
+            #logo-texto {
+                float:right;
+            }
             #ods {
                 flex-direction: column;
                 align-items: center;
@@ -66,7 +80,7 @@
     </style>
 </head>
 <body>
-    <nav>
+    <nav class="nav-bar">
         <img src="../img/logo.png"/>
         <ul>
             <li><a href="../index.html">Início</a></li>
@@ -87,10 +101,11 @@
                 <h1>Projeto VddUP</h1>
             </header>
             <section>
+                <img id="logo-texto" src="../img/logotopo.png" alt="Logo do Projeto VddUP" />
                 <p>
                     O projeto VddUP surgiu com o objetivo de refletir sobre como o senso comum pode afetar negativamente a saúde física das pessoas. Em um cenário onde a informação circula com rapidez e em grande volume, muitas ideias sem base científica acabam sendo aceitas como verdade — influenciando desde o uso de remédios caseiros até práticas perigosas de alimentação e exercícios físicos.
                 </p>
-                <p>
+                <p style="text-indent:0;">
                     Pesquisas recentes mostram que muita gente ainda busca conselhos com familiares ou em sites da internet sem comprovação. Isso pode parecer inofensivo, mas gera consequências sérias: hábitos ruins, escolhas ineficazes e até prejuízos reais à saúde. Durante e após a pandemia de COVID-19, a quantidade de informações erradas aumentou ainda mais, reforçando a importância de entender melhor esse fenômeno e combater seus efeitos.
                 </p> 
                 <p>
@@ -138,5 +153,6 @@
             <p class="creditos">&copy; Projeto VddUP. Todos os direitos reservados.</p>
         </section>
     </footer>
+    <script src="../js/menu-dropdown.js" defer></script>
 </body>
 </html>
