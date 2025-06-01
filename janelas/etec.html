@@ -44,6 +44,35 @@
             float:calc(100% - 15vw);
             margin: 0% 5% 5% 5%;
         }
+        @media (max-width: 900px) {
+            #conteudo-pagina {
+                padding: 2% 5%;
+            }
+            #logo-santa-isabel {
+                width: 20vw;
+                float: none;
+                display: block;
+                margin: 0 auto;
+            }
+            .banner-container {
+                height: 30vw;
+            }
+        }
+        @media (max-width: 600px) {
+            #cabecalho h1 {
+                font-size: 6vw;
+            }
+            .banner-container {
+                height: 40vw;
+            }
+            .texto-explicativo {
+                translate: 0;
+            }
+            #logo-santa-isabel {
+                width: 30vw;
+            }
+            
+        }
     </style>
 </head>
 <body>
@@ -63,10 +92,10 @@
         </ul>
         <section class="dropdown">
             <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <span class="material-symbols-outlined">menu</span>
+                <span>Menu</span>
             </button>
             <section class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item" href="../index.html">Ínicio</a>
+                <a class="dropdown-item" href="../index.html" onclick="event.preventDefault(); window.location.href='../index.html';">Início</a>
                 <a class="dropdown-item" href="projeto.html">Projeto</a>
                 <a class="dropdown-item" href="etec.html">Etec Santa Isabel</a>
                 <a class="dropdown-item" href="jogo.html">Jogo</a>
@@ -75,13 +104,13 @@
         </section>
     </nav>
     <section class="pagina">
+        <section class="banner-container">
+            <img class="banner-img active" src="../img/etec/etec-santa-isabel.jpg" alt="Banner 1">
+            <img class="banner-img" src="../img/etec/etec2.webp" alt="Banner 2">
+            <img class="banner-img" src="../img/etec/etec3.webp" alt="Banner 3">
+        </section>
         <section class="texto-explicativo">
             <header id="cabecalho">
-                <section class="banner-container">
-                    <img class="banner-img active" src="../img/etec/etec-santa-isabel.jpg" alt="Banner 1">
-                    <img class="banner-img" src="../img/etec/etec2.webp" alt="Banner 2">
-                    <img class="banner-img" src="../img/etec/etec3.webp" alt="Banner 3">
-                </section>
                 <h1 style="margin-top:6vw;">Etec Santa Isabel</h1>
             </header>
             <section id="conteudo-pagina">

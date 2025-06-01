@@ -55,7 +55,7 @@ nav > ul li a:hover{
 
 
 
-.dropdown {
+.dropdown{
     display:none;
 }
 .dropdown button {
@@ -81,7 +81,7 @@ nav > ul li a:hover{
 .dropdown-menu {
     position: absolute;
     translate: -120px;
-    height: 500px;
+    height: auto;
     background-color: rgb(66, 99, 59);
 }
 .dropdown-menu a {
@@ -200,7 +200,7 @@ footer {
         padding: 10px 16px;
     }
     .pagina {
-        padding: 3vw 2vw;
+        padding: 0;
     }
 }
 @media (max-width: 700px) {
@@ -212,8 +212,5 @@ footer {
     }
     .nav-bar > ul{
         display:none;
-    }
-    .pagina {
-        padding: 3vw 2vw;
     }
 }

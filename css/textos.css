@@ -29,16 +29,22 @@
 }
 
 @media (max-width: 900px) {
+    .texto-explicativo {
+        padding: 0 5vw;
+    }
     .texto-explicativo h1 {
+        padding: 0;
         font-size: 1.7rem;
     }
     .texto-explicativo p {
+        padding: 0;
         font-size: 1rem;
-        margin: 5vw 0.3vw 1.5vw 0.3vw;
+        margin: 5vw 0.3vw 1.5vw 0.05vw;
         text-indent: 0;
         text-align: left;
     }
     .texto-explicativo ul {
+        padding: 0;
         font-size: 0.9rem;
         margin: 0 4vw 3vw 4vw;
         padding-left: 1em;
@@ -50,7 +56,7 @@
     }
     .texto-explicativo p {
         font-size: 1.125rem;
-        margin: 7vw 0.1vw 1.5vw 0.1vw;
+        margin: 7vw 0.1vw 1.5vw 0.02vw;
         text-indent: 0;
         text-align: left;
     }
