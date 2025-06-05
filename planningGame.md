@@ -104,3 +104,57 @@ A) Evitar lesões futuras
 B) Melhorar a flexibilidade
 C) Aumentar a força muscular
 D) Queimar gordura localizada
+
+2. Fazer exercícios em jejum sempre acelera o emagrecimento?
+A) Sim, sempre acelera a queima de gordura
+B) Não, depende do tipo e intensidade do exercício
+C) Sim, pois o corpo usa só gordura para energia
+D) Não, o jejum diminui o metabolismo
+
+3. O que tende a causar mais lesões em iniciantes?
+A) Musculação mal orientada
+B) Corrida em excesso
+C) Alongamento antes do treino
+D) Exercícios de baixo impacto
+
+4. Por que descansar entre os treinos pode ser tão importante quanto o treino em si?
+A) Porque o descanso evita a perda de peso
+B) Porque o corpo se recupera e constrói músculos durante o descanso
+C) Porque descansar aumenta o metabolismo imediatamente
+D) Porque descansar elimina a necessidade de alimentação adequada
+
+5. A caminhada é suficiente para manter um bom condicionamento físico em todas as idades?
+A) Sim, para qualquer pessoa e idade
+B) Não, pessoas mais velhas devem evitar caminhar
+C) Depende da intensidade e condição física da pessoa
+D) Não, só exercícios intensos funcionam
+
+6. Qual fator pesa mais para a perda de peso?
+A) Intensidade do exercício
+B) Duração do exercício
+C) Quantidade de água ingerida
+D) Tipo de roupa usada durante o treino
+
+7. Treinar com dor muscular sempre significa que o corpo está evoluindo?
+A) Sim, dor significa progresso
+B) Não, dor excessiva pode indicar lesão ou excesso
+C) Sim, dor é essencial para crescimento
+D) Não, dor muscular nunca acontece com treino correto
+
+8. Qual o principal erro de quem começa a treinar e para rápido?
+A) Não usar roupas adequadas
+B) Exigir resultados rápidos e exagerar na carga
+C) Fazer exercícios só ao ar livre
+D) Comer alimentos saudáveis
+
+9. Treinar apenas uma vez por semana gera algum benefício real à saúde?
+A) Sim, mas os benefícios são limitados
+B) Não, não traz nenhum benefício
+C) Sim, isso é suficiente para alta performance
+D) Não, pode piorar a saúde
+
+10. É melhor fazer 10 minutos de exercício todo dia ou 1 hora só no fim de semana?
+A) 1 hora no fim de semana, pois o tempo total é maior
+B) 10 minutos todo dia, pois mantém o corpo ativo regularmente
+C) Nenhum dos dois é eficiente
+D) Fazer exercícios apenas uma vez por mês é melhor
