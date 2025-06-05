@@ -98,3 +98,9 @@ Criar um quiz educativo que ajude os participantes a diferenciarem fontes confi�
 
 ---
 
+## Perguntas fáceis
+1. Qual é a principal função do alongamento pós-treino?
+A) Evitar lesões futuras
+B) Melhorar a flexibilidade
+C) Aumentar a força muscular
+D) Queimar gordura localizada
