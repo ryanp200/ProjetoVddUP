@@ -104,7 +104,7 @@ nav > ul li a:hover{
     display: block;
     opacity: 0;
     transform: translateY(-20px);
-    transition: opacity 0.3s ease, transform 0.3s ease;
+    transition: opacity 0.3s ease, transform 0.3 ease;
     pointer-events: none;
     position: absolute;
     top: 100%;
