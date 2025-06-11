@@ -19,14 +19,30 @@
         }
 
         #opcoes-resposta-container>button {
-            height: 6vh;
+            height: 40px;
             margin-bottom: 10px;
-            font-size: 1rem;
+            font-size: 16px;
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            color: #000;
+        }
+
+        #opcoes-resposta-container>button:disabled {
+            opacity: 1 !important;
+            color: #000 !important;
+            cursor: default;
+            pointer-events: none;
+        }
+
+        #opcoes-resposta-container>button:hover {
+            background-color: #f0f0f0;
+            color: #000;
+            cursor: default;
         }
 
         #feedback {
             margin-top: 20px;
-            font-size: 1.1rem;
+            font-size: 18px;
             text-align: center;
         }
 
@@ -40,19 +56,20 @@
         #back-button,
         #next-button,
         #restart-button {
-            display: none;
+            display: inline-block;
         }
 
         .correct {
-            background-color: #28a745 !important;
-            color: white;
+            background-color: green !important;
+            color: white !important;
         }
 
         .incorrect {
-            background-color: #dc3545 !important;
-            color: white;
+            background-color: red !important;
+            color: white !important;
         }
     </style>
+
 </head>
 
 <body>
@@ -382,3 +399,432 @@
                 explanation: "Meditar reduz estresse e melhora foco, com impacto direto na saúde mental."
             },
             {
+                id: 38,
+                question: "Dormir mal pode aumentar o risco de ansiedade?",
+                options: ["Sim, pode", "Não, não afeta", "Só em jovens", "Depende da causa"],
+                correctAnswer: 0,
+                explanation: "Sono ruim desregula hormônios, aumentando a probabilidade de ansiedade."
+            },
+            {
+                id: 39,
+                question: "Como a alimentação influencia diretamente no humor?",
+                options: ["Não influencia", "Por nutrientes", "Só por calorias", "Por sabor"],
+                correctAnswer: 1,
+                explanation: "Nutrientes como ômega-3 e vitaminas afetam neurotransmissores, influenciando o humor."
+            },
+            {
+                id: 40,
+                question: "Passar longos períodos sem descanso mental pode afetar o rendimento físico?",
+                options: ["Sim, pode", "Não, não afeta", "Só em atletas", "Depende da idade"],
+                correctAnswer: 0,
+                explanation: "Fadiga mental reduz concentração e desempenho físico, mesmo em não atletas."
+            },
+            {
+                id: 41,
+                question: "Suar mais durante o treino significa perder mais gordura?",
+                options: ["Sim, sempre", "Não, é mito", "Depende do treino", "Só em calor"],
+                correctAnswer: 1,
+                explanation: "Suor indica perda de água, não de gordura; a queima calórica define a perda."
+            },
+            {
+                id: 42,
+                question: "O metabolismo realmente desacelera com a idade, ou isso é um mito?",
+                options: ["Desacelera", "É mito", "Só em mulheres", "Depende da dieta"],
+                correctAnswer: 0,
+                explanation: "Metabolismo desacelera com a idade devido à perda de massa muscular."
+            },
+            {
+                id: 43,
+                question: "Comer de 3 em 3 horas acelera o metabolismo?",
+                options: ["Sim, sempre", "Não, é mito", "Depende da pessoa", "Só em atletas"],
+                correctAnswer: 1,
+                explanation: "Frequência de refeições não acelera o metabolismo; o total calórico importa mais."
+            },
+            {
+                id: 44,
+                question: "Todo alimento 'light' é mais saudável que sua versão normal?",
+                options: ["Sim, sempre", "Não, depende", "Só para emagrecer", "É pior"],
+                correctAnswer: 1,
+                explanation: "Alimentos 'light' podem ter menos nutrientes ou aditivos, nem sempre sendo saudáveis."
+            },
+            {
+                id: 45,
+                question: "Água com gás faz mal para os ossos?",
+                options: ["Sim, faz", "Não, é mito", "Depende da marca", "Só em excesso"],
+                correctAnswer: 1,
+                explanation: "Água com gás não afeta os ossos; o mito vem de confusão com refrigerantes."
+            },
+            {
+                id: 46,
+                question: "Qual é o verdadeiro papel do colesterol no corpo?",
+                options: ["Causa doenças", "Forma hormônios", "Só engorda", "Não tem função"],
+                correctAnswer: 1,
+                explanation: "Colesterol é essencial para formar hormônios, membranas celulares e vitamina D."
+            },
+            {
+                id: 47,
+                question: "O que é considerado um IMC saudável para adultos?",
+                options: ["15-20", "18.5-24.9", "25-30", "Acima de 30"],
+                correctAnswer: 1,
+                explanation: "IMC entre 18.5 e 24.9 é considerado saudável para a maioria dos adultos."
+            },
+            {
+                id: 48,
+                question: "Por que o cálcio é tão importante após os 50 anos?",
+                options: ["Melhora humor", "Fortalece ossos", "Aumenta energia", "Reduz peso"],
+                correctAnswer: 1,
+                explanation: "Cálcio previne osteoporose, que é mais comum após os 50 anos devido à perda óssea."
+            },
+            {
+                id: 49,
+                question: "A vitamina D ajuda apenas na absorção de cálcio?",
+                options: ["Sim, apenas", "Não, além disso", "Só em idosos", "Não ajuda"],
+                correctAnswer: 1,
+                explanation: "Vitamina D também fortalece a imunidade e regula funções musculares."
+            },
+            {
+                id: 50,
+                question: "Qual hábito reduz o risco de doenças cardíacas em até 30%?",
+                options: ["Dormir mais", "Caminhar regularmente", "Evitar açúcar", "Tomar vitaminas"],
+                correctAnswer: 1,
+                explanation: "Caminhar regularmente melhora a circulação e reduz o risco cardíaco em até 30%."
+            },
+            {
+                id: 51,
+                question: "O consumo excessivo de água pode causar intoxicação hídrica porque:",
+                options: [
+                    "O corpo elimina o excesso imediatamente.",
+                    "Causa excesso de sódio no sangue.",
+                    "Dilui o sódio no sangue, causando desequilíbrio eletrolítico.",
+                    "Faz os rins funcionarem melhor."
+                ],
+                correctAnswer: 2,
+                explanation: "Intoxicação hídrica ocorre quando o excesso de água dilui o sódio no sangue, causando desequilíbrios eletrolíticos."
+            },
+            {
+                id: 52,
+                question: "Comer carboidrato à noite sempre leva ao ganho de peso porque:",
+                options: [
+                    "O metabolismo para durante a noite.",
+                    "O corpo armazena todos os carboidratos como gordura.",
+                    "O horário da refeição não é o único fator para ganho de peso.",
+                    "Carboidratos são prejudiciais em qualquer horário."
+                ],
+                correctAnswer: 2,
+                explanation: "O ganho de peso depende do balanço calórico total, não apenas do horário da ingestão de carboidratos."
+            },
+            {
+                id: 53,
+                question: "Para fortalecer os ossos, qual tipo de exercício é mais eficaz?",
+                options: [
+                    "Exercícios de alongamento.",
+                    "Exercícios de impacto, como corrida.",
+                    "Exercícios aquáticos.",
+                    "Caminhadas lentas."
+                ],
+                correctAnswer: 1,
+                explanation: "Exercícios de impacto estimulam a formação óssea, fortalecendo os ossos."
+            },
+            {
+                id: 54,
+                question: "Um sinal de exercício em intensidade excessiva é:",
+                options: [
+                    "Sensação de bem-estar.",
+                    "Sono tranquilo.",
+                    "Fadiga persistente e dores musculares intensas.",
+                    "Aumento gradual da força."
+                ],
+                correctAnswer: 2,
+                explanation: "Fadiga persistente e dores intensas indicam sobrecarga, sinalizando excesso de intensidade no treino."
+            },
+            {
+                id: 55,
+                question: "Por que dizem que a queima de gordura só acontece após 30 minutos de exercício?",
+                options: [
+                    "Porque o corpo só começa a usar gordura depois desse tempo.",
+                    "Porque o corpo queima mais gordura do que glicose após certo tempo.",
+                    "Porque o exercício de até 30 minutos não queima calorias.",
+                    "Porque a gordura é queimada imediatamente."
+                ],
+                correctAnswer: 1,
+                explanation: "Após cerca de 20-30 minutos, o corpo aumenta o uso de gordura como principal fonte de energia, mas a queima começa antes."
+            },
+            {
+                id: 56,
+                question: "Dietas detox são eficazes para desintoxicar o corpo porque:",
+                options: [
+                    "Elas limpam completamente o fígado.",
+                    "O corpo humano já tem sistemas próprios para eliminar toxinas.",
+                    "Elas eliminam todas as toxinas em 24 horas.",
+                    "A água com limão neutraliza as toxinas."
+                ],
+                correctAnswer: 1,
+                explanation: "O fígado e os rins já eliminam toxinas; dietas detox têm pouco efeito adicional."
+            },
+            {
+                id: 57,
+                question: "O consumo excessivo de sódio pode aumentar o risco de hipertensão porque:",
+                options: [
+                    "Sódio reduz a quantidade de água no corpo.",
+                    "Sódio aumenta a retenção de líquidos, elevando a pressão arterial.",
+                    "Sódio diminui o volume sanguíneo.",
+                    "Sódio acelera o metabolismo."
+                ],
+                correctAnswer: 1,
+                explanation: "Sódio aumenta a retenção de fluidos, elevando a pressão arterial e o risco de hipertensão."
+            },
+            {
+                id: 58,
+                question: "A cafeína melhora o desempenho físico porque:",
+                options: [
+                    "Relaxa os músculos.",
+                    "Diminui a fadiga e aumenta o estado de alerta.",
+                    "Substitui a água perdida no exercício.",
+                    "Reduz a frequência cardíaca."
+                ],
+                correctAnswer: 1,
+                explanation: "A cafeína estimula o sistema nervoso, reduzindo a percepção de fadiga e aumentando o desempenho."
+            },
+            {
+                id: 59,
+                question: "Se uma pessoa fica muito tempo sedentária, sua massa muscular:",
+                options: [
+                    "Aumenta automaticamente.",
+                    "Permanece a mesma.",
+                    "Diminui devido à falta de estímulo.",
+                    "Se transforma em gordura."
+                ],
+                correctAnswer: 2,
+                explanation: "Sem estímulo, os músculos atrofiam, reduzindo a massa muscular."
+            },
+            {
+                id: 60,
+                question: "O estresse crônico influencia na saúde física porque:",
+                options: [
+                    "Fortalece o sistema imunológico.",
+                    "Pode aumentar a inflamação e o risco de doenças.",
+                    "Melhora a qualidade do sono.",
+                    "Reduz a pressão arterial."
+                ],
+                correctAnswer: 1,
+                explanation: "Estresse crônico eleva a inflamação, aumentando o risco de doenças crônicas."
+            },
+            {
+                id: 61,
+                question: "A hidratação durante exercícios em ambientes quentes é importante porque:",
+                options: [
+                    "Evita a perda excessiva de água e ajuda a controlar a temperatura corporal.",
+                    "Faz o suor parar.",
+                    "Faz o corpo suar menos, evitando a fadiga.",
+                    "Não é tão importante."
+                ],
+                correctAnswer: 0,
+                explanation: "Hidratação previne a desidratação e regula a temperatura corporal em climas quentes."
+            },
+            {
+                id: 62,
+                question: "O ferro é importante para a saúde física porque:",
+                options: [
+                    "Transporta oxigênio pelo sangue.",
+                    "É usado para armazenar gordura.",
+                    "Aumenta a temperatura corporal.",
+                    "Controla o nível de glicose."
+                ],
+                correctAnswer: 0,
+                explanation: "O ferro é essencial para a hemoglobina, que transporta oxigênio no sangue."
+            },
+            {
+                id: 63,
+                question: "O efeito platô no emagrecimento é quando:",
+                options: [
+                    "A perda de peso para após certo tempo.",
+                    "O peso aumenta rapidamente.",
+                    "O metabolismo acelera muito.",
+                    "A pessoa não sente fome."
+                ],
+                correctAnswer: 0,
+                explanation: "O platô ocorre quando a perda de peso estagna devido a adaptações metabólicas."
+            },
+            {
+                id: 64,
+                question: "Os músculos precisam de proteínas após o exercício porque:",
+                options: [
+                    "Proteínas são usadas para gerar energia imediata.",
+                    "Elas ajudam na recuperação e no crescimento muscular.",
+                    "Proteínas são eliminadas pelo suor.",
+                    "Proteínas não têm papel nos músculos."
+                ],
+                correctAnswer: 1,
+                explanation: "Proteínas fornecem aminoácidos para reparar e construir músculos após o exercício."
+            },
+            {
+                id: 65,
+                question: "Qual gordura oferece maior risco para a saúde?",
+                options: [
+                    "Gordura subcutânea.",
+                    "Gordura visceral.",
+                    "Gordura em músculos.",
+                    "Gordura da pele."
+                ],
+                correctAnswer: 1,
+                explanation: "Gordura visceral, ao redor dos órgãos, aumenta o risco de doenças cardiovasculares."
+            },
+            {
+                id: 66,
+                question: "Para emagrecer, exercícios aeróbicos são:",
+                options: [
+                    "Sempre melhores que musculação.",
+                    "Melhor para queima de calorias em atividade prolongada, mas musculação também é importante.",
+                    "Não ajudam no emagrecimento.",
+                    "Apenas indicados para idosos."
+                ],
+                correctAnswer: 1,
+                explanation: "Aeróbicos queimam calorias, mas musculação aumenta o metabolismo a longo prazo."
+            },
+            {
+                id: 67,
+                question: "O álcool interfere na recuperação muscular porque:",
+                options: [
+                    "Aumenta a síntese de proteínas.",
+                    "Diminui a inflamação.",
+                    "Retarda a recuperação e desidrata o corpo.",
+                    "Melhora a absorção de nutrientes."
+                ],
+                correctAnswer: 2,
+                explanation: "Álcool retarda a síntese de proteínas e causa desidratação, prejudicando a recuperação."
+            },
+            {
+                id: 68,
+                question: "Dormir mal pode aumentar o risco de ganhar peso porque:",
+                options: [
+                    "Diminui o apetite.",
+                    "Aumenta os hormônios que estimulam o apetite e reduz os que promovem saciedade.",
+                    "Melhora o metabolismo.",
+                    "Não interfere no peso."
+                ],
+                correctAnswer: 1,
+                explanation: "Sono insuficiente desregula hormônios como grelina e leptina, aumentando o apetite."
+            },
+            {
+                id: 69,
+                question: "O consumo excessivo de alimentos ultraprocessados:",
+                options: [
+                    "Melhora a saúde intestinal.",
+                    "Não afeta a saúde física.",
+                    "Pode levar a doenças crônicas e desequilíbrios nutricionais.",
+                    "Aumenta a disposição."
+                ],
+                correctAnswer: 2,
+                explanation: "Ultraprocessados são ricos em açúcar, gordura e aditivos, aumentando o risco de doenças crônicas."
+            },
+            {
+                id: 70,
+                question: "Para melhorar a saúde cardiovascular apenas com alimentação, deve-se:",
+                options: [
+                    "Evitar gorduras saturadas e consumir mais fibras e antioxidantes.",
+                    "Comer muita gordura.",
+                    "Reduzir consumo de frutas.",
+                    "Evitar água."
+                ],
+                correctAnswer: 0,
+                explanation: "Fibras e antioxidantes reduzem colesterol e inflamação, melhorando a saúde cardiovascular."
+            }
+        ];
+
+        let currentQuestions = [];
+        let currentQuestionIndex = 0;
+        let score = 0;
+        let userAnswers = [];
+
+        function startRound() {
+            currentQuestions = [...questions];
+            currentQuestionIndex = 0;
+            score = 0;
+            userAnswers = Array(currentQuestions.length).fill(null);
+            $("#score").text(Acertos: ${score} / 70);
+            $("#back-button").hide();
+            $("#next-button").hide();
+            $("#restart-button").hide();
+            displayQuestion();
+        }
+
+        function displayQuestion() {
+            const question = currentQuestions[currentQuestionIndex];
+            $("#question-text").text(${currentQuestionIndex + 1}. ${question.question});
+            $("#opcoes-resposta-container button").removeClass("correct incorrect").prop("disabled", false);
+            $("#feedback").text("");
+
+            $("#opcoes-resposta-container button").each((index, button) => {
+                $(button).text(question.options[index]);
+            });
+
+            if (userAnswers[currentQuestionIndex] !== null) {
+                const selectedIndex = userAnswers[currentQuestionIndex];
+                $("#opcoes-resposta-container button").prop("disabled", true);
+                if (selectedIndex === question.correctAnswer) {
+                    $("#feedback").html(<span style="color: green;'>Correct!</span>);
+                    $(#opcoes-resposta-container button:eq(${selectedIndex})).addClass("correct");
+                } else {
+                    $("#feedback").html(Errado! ${question.explanation}<br><strong>Resposta correta:</strong> ${question.options[question.correctAnswer]});
+                    $(#opcoes-resposta-container button:eq(${selectedIndex})).addClass("incorrect");
+                    $(#opcoes-resposta-container button:eq(${question.correctAnswer})).addClass("correct");
+                }
+            }
+
+            $("#back-button").toggle(currentQuestionIndex > 0);
+            $("#next-button").toggle(userAnswers[currentQuestionIndex] !== null && currentQuestionIndex < currentQuestions.length - 1);
+            $("#restart-button").toggle(currentQuestionIndex === currentQuestions.length - 1 && userAnswers[currentQuestionIndex] !== null);
+        }
+
+        function checkAnswer(selectedIndex) {
+            const question = currentQuestions[currentQuestionIndex];
+            userAnswers[currentQuestionIndex] = selectedIndex;
+            $("#opcoes-resposta-container button").prop("disabled", true);
+
+            if (selectedIndex === question.correctAnswer) {
+                score++;
+                $("#feedback").html(<span style='color: green;'>Correct!</span>);
+                $(#opcoes-resposta-container button:eq(${selectedIndex})).addClass("correct");
+            } else {
+                $("#feedback").html(Errado! ${question.explanation}<br><strong>Resposta correta:</strong> ${question.options[question.correctAnswer]});
+                $(#opcoes-resposta-container button:eq(${selectedIndex})).addClass("incorrect");
+                $(#opcoes-resposta-container button:eq(${question.correctAnswer})).addClass("correct");
+            }
+
+            $("#score").text(Acertos: ${score} / 70);
+            $("#next-button").toggle(currentQuestionIndex < currentQuestions.length - 1);
+            $("#restart-button").toggle(currentQuestionIndex === currentQuestions.length - 1);
+        }
+
+        $(document).ready(() => {
+            startRound();
+
+            $("#opcoes-resposta-container button").click(function () {
+                if (userAnswers[currentQuestionIndex] === null) {
+                    const index = $("#opcoes-resposta-container button").index(this);
+                    checkAnswer(index);
+                }
+            });
+
+            $("#next-button").click(() => {
+                if (currentQuestionIndex < currentQuestions.length - 1) {
+                    currentQuestionIndex++;
+                    displayQuestion()
+                }
+            });
+
+            $("#back-button").click(() => {
+                if (currentQuestionIndex > 0) {
+                    currentQuestionIndex--;
+                    displayQuestion();
+                }
+            });
+
+            $("#restart-button").click(() => {
+                startRound();
+            });
+        });
+    </script>
+</body>
+
+</html>
