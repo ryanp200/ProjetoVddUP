@@ -1,13 +1,16 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8"/>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>LabMIS</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=menu" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" href="../css/geral.css"/>
-    <link rel="stylesheet" href="../css/textos.css"/>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=menu" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/geral.css" />
+    <link rel="stylesheet" href="../css/textos.css" />
     <link rel="icon" href="../img/logoTopo.png" />
     <style>
         #opcoes-resposta-container {
@@ -15,7 +18,7 @@
             flex-direction: column;
         }
 
-        #opcoes-resposta-container > button {
+        #opcoes-resposta-container>button {
             height: 6vh;
             margin-bottom: 10px;
             font-size: 1rem;
@@ -27,8 +30,16 @@
             text-align: center;
         }
 
-        #next-button, #restart-button {
+        #button-container {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
             margin-top: 20px;
+        }
+
+        #back-button,
+        #next-button,
+        #restart-button {
             display: none;
         }
 
@@ -43,9 +54,10 @@
         }
     </style>
 </head>
+
 <body>
     <nav class="nav-bar">
-        <img src="../img/logo.png"/>
+        <img src="../img/logo.png" />
         <ul>
             <li><a href="../index.html">Início</a></li>
             <li class="dropdown-projeto">
@@ -59,11 +71,13 @@
             <li><a href="criadores.html">Criadores</a></li>
         </ul>
         <section class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <span>Menu</span>
             </button>
             <section class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item" href="../index.html" onclick="event.preventDefault(); window.location.href='../index.html';">Início</a>
+                <a class="dropdown-item" href="../index.html"
+                    onclick="event.preventDefault(); window.location.href='../index.html';">Início</a>
                 <a class="dropdown-item" href="projeto.html">Projeto</a>
                 <a class="dropdown-item" href="etec.html">Etec Santa Isabel</a>
                 <a class="dropdown-item" href="jogo.html">Jogo</a>
@@ -72,7 +86,7 @@
         </section>
     </nav>
     <section class="pagina">
-        <h3 id="question-text">Carregando pergunta...</h3>
+        <h3 id="question-text"></h3>
         <section id="opcoes-resposta-container">
             <button class="btn btn-primary"></button>
             <button class="btn btn-primary"></button>
@@ -80,9 +94,12 @@
             <button class="btn btn-primary"></button>
         </section>
         <div id="feedback"></div>
-        <button id="next-button" class="btn btn-success">Próxima Pergunta</button>
-        <button id="restart-button" class="btn btn-secondary">Nova Rodada</button>
-        <div id="score">Acertos: 0 / 20</div>
+        <div id="button-container">
+            <button id="back-button" class="btn btn-secondary">Voltar</button>
+            <button id="next-button" class="btn btn-success">Próxima Pergunta</button>
+            <button id="restart-button" class="btn btn-secondary">Nova Rodada</button>
+        </div>
+        <div id="score">Acertos: 0 / 70</div>
     </section>
     <footer class="rodape">
         <section class="rodape-conteudo">
@@ -96,148 +113,272 @@
             <p class="creditos">© Projeto VddUP. Todos os direitos reservados.</p>
         </section>
     </footer>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
     <script>
-        // Matriz de perguntas (exemplo com algumas perguntas)
         const questions = [
             {
                 id: 1,
-                category: "Exercício Físico",
-                difficulty: "fácil",
-                question: "Qual é a principal função do alongamento pós-treino: evitar lesão ou melhorar a flexibilidade?",
-                options: [
-                    "Evitar lesão",
-                    "Melhorar a flexibilidade",
-                    "Aumentar a força muscular",
-                    "Reduzir o peso corporal"
-                ],
+                question: "Qual é a principal função do alongamento pós-treino?",
+                options: ["Evitar lesão", "Melhorar a flexibilidade", "Aumentar a força", "Reduzir o peso"],
                 correctAnswer: 1,
-                explanation: "A principal função do alongamento pós-treino é melhorar a flexibilidade, ajudando a relaxar os músculos e aumentar a amplitude de movimento. Evitar lesões é mais associado ao aquecimento pré-treino, enquanto força muscular e perda de peso não são objetivos diretos do alongamento."
+                explanation: "A principal função do alongamento pós-treino é melhorar a flexibilidade, ajudando a relaxar os músculos."
             },
             {
                 id: 2,
-                category: "Exercício Físico",
-                difficulty: "fácil",
                 question: "Fazer exercícios em jejum sempre acelera o emagrecimento?",
-                options: [
-                    "Sim, sempre acelera",
-                    "Não, depende do tipo de exercício",
-                    "Não, pode até atrapalhar",
-                    "Sim, mas só em exercícios longos"
-                ],
+                options: ["Sim, sempre", "Não, depende do exercício", "Não, pode atrapalhar", "Sim, só em exercícios longos"],
                 correctAnswer: 2,
-                explanation: "Fazer exercícios em jejum não garante aceleração do emagrecimento. Pode funcionar para algumas pessoas, mas para outras, a falta de energia pode reduzir a intensidade do treino, diminuindo a queima calórica. O emagrecimento depende mais do balanço calórico geral."
+                explanation: "Fazer exercícios em jejum não garante emagrecimento. Depende do balanço calórico geral."
             },
             {
                 id: 3,
-                category: "Exercício Físico",
-                difficulty: "difícil",
-                question: "Por que descansar entre os treinos pode ser tão importante quanto o treino em si?",
-                options: [
-                    "Evita o ganho de peso",
-                    "Permite a recuperação muscular",
-                    "Aumenta a frequência cardíaca",
-                    "Reduz a necessidade de sono"
-                ],
+                question: "Por que descansar entre os treinos é importante?",
+                options: ["Evita ganho de peso", "Permite recuperação muscular", "Aumenta frequência cardíaca", "Reduz necessidade de sono"],
                 correctAnswer: 1,
-                explanation: "Descansar entre os treinos é crucial para a recuperação muscular, permitindo que as fibras musculares se reparem e cresçam, além de prevenir lesões por overuse. As outras opções não têm relação direta com o descanso entre treinos."
+                explanation: "Descansar permite a recuperação muscular, essencial para crescimento e prevenção de lesões."
             },
-            // Adicionar as demais perguntas (completar até 50 fáceis e 30 difíceis)
-        ];
-
-        let currentQuestions = [];
-        let currentQuestionIndex = 0;
-        let score = 0;
-
-        // Função para embaralhar array
-        function shuffle(array) {
-            for (let i = array.length - 1; i > 0; i--) {
-                const j = Math.floor(Math.random() * (i + 1));
-                [array[i], array[j]] = [array[j], array[i]];
-            }
-            return array;
-        }
-
-        // Selecionar perguntas aleatoriamente
-        function getRandomQuestions(difficulty, count) {
-            const filtered = questions.filter(q => q.difficulty === difficulty);
-            return shuffle(filtered).slice(0, count);
-        }
-
-        // Iniciar nova rodada
-        function startRound() {
-            currentQuestions = [
-                ...getRandomQuestions("fácil", 10),
-                ...getRandomQuestions("difícil", 10)
-            ];
-            currentQuestions = shuffle(currentQuestions);
-            currentQuestionIndex = 0;
-            score = 0;
-            $("#score").text(`Acertos: ${score} / 20`);
-            $("#restart-button").hide();
-            displayQuestion();
-        }
-
-        // Exibir pergunta atual
-        function displayQuestion() {
-            const question = currentQuestions[currentQuestionIndex];
-            $("#question-text").text(question.question);
-            $("#opcoes-resposta-container button").removeClass("correct incorrect").prop("disabled", false);
-            $("#feedback").text("");
-            $("#next-button").hide();
-
-            $("#opcoes-resposta-container button").each((index, button) => {
-                $(button).text(question.options[index]);
-            });
-        }
-
-        // Verificar resposta
-        function checkAnswer(selectedIndex) {
-            const question = currentQuestions[currentQuestionIndex];
-            $("#opcoes-resposta-container button").prop("disabled", true);
-
-            if (selectedIndex === question.correctAnswer) {
-                score++;
-                $("#feedback").html(`<span style="color: green;">Correto!</span>`);
-                $(`#opcoes-resposta-container button:eq(${selectedIndex})`).addClass("correct");
-            } else {
-                $("#feedback").html(`Errado! ${question.explanation}<br><strong>Resposta correta:</strong> ${question.options[question.correctAnswer]}`);
-                $(`#opcoes-resposta-container button:eq(${selectedIndex})`).addClass("incorrect");
-                $(`#opcoes-resposta-container button:eq(${question.correctAnswer})`).addClass("correct");
-            }
-
-            $("#score").text(`Acertos: ${score} / 20`);
-            $("#next-button").show();
-
-            if (currentQuestionIndex === currentQuestions.length - 1) {
-                $("#next-button").hide();
-                $("#restart-button").show();
-            }
-        }
-
-        $(document).ready(() => {
-            startRound();
-
-            // Clique nas opções
-            $("#opcoes-resposta-container button").click(function() {
-                const index = $("#opcoes-resposta-container button").index(this);
-                checkAnswer(index);
-            });
-
-            $("#next-button").click(() => {
-                currentQuestionIndex++;
-                if (currentQuestionIndex < currentQuestions.length) {
-                    displayQuestion();
-                }
-            });
-
-            // Nova rodada
-            $("#restart-button").click(() => {
-                startRound();
-            });
-        });
-    </script>
-</body>
-</html>
+            {
+                id: 4,
+                question: "O que tende a causar mais lesões em iniciantes: musculação mal orientada ou corrida em excesso?",
+                options: ["Musculação mal orientada", "Corrida em excesso", "Ambos igualmente", "Nenhum causa lesões"],
+                correctAnswer: 0,
+                explanation: "Musculação mal orientada tende a causar mais lesões em iniciantes devido à técnica inadequada e sobrecarga."
+            },
+            {
+                id: 5,
+                question: "A caminhada é suficiente para manter um bom condicionamento físico em todas as idades?",
+                options: ["Sim, sempre", "Não, depende da intensidade", "Apenas para idosos", "Não, precisa de musculação"],
+                correctAnswer: 1,
+                explanation: "Caminhada pode ser suficiente, mas a intensidade e frequência devem variar conforme a idade e condição física."
+            },
+            {
+                id: 6,
+                question: "Qual fator pesa mais para a perda de peso: intensidade ou duração do exercício?",
+                options: ["Intensidade", "Duração", "Ambos igualmente", "Nenhum importa"],
+                correctAnswer: 0,
+                explanation: "Intensidade é mais eficaz para perda de peso, pois aumenta a queima calórica em menos tempo."
+            },
+            {
+                id: 7,
+                question: "Treinar com dor muscular sempre significa que o corpo está evoluindo?",
+                options: ["Sim, sempre", "Não, pode ser lesão", "Apenas em iniciantes", "Depende da intensidade"],
+                correctAnswer: 1,
+                explanation: "Dor muscular não garante evolução e pode indicar lesão ou excesso, especialmente se persistente."
+            },
+            {
+                id: 8,
+                question: "Qual o principal erro de quem começa a treinar e para rápido?",
+                options: ["Falta de paciência", "Treinar demais", "Não ter treinador", "Má alimentação"],
+                correctAnswer: 0,
+                explanation: "Falta de paciência é comum, pois muitos esperam resultados rápidos e desistem ao não vê-los."
+            },
+            {
+                id: 9,
+                question: "Treinar apenas uma vez por semana gera algum benefício real à saúde?",
+                options: ["Sim, pequeno", "Não, é inútil", "Apenas mental", "Depende do treino"],
+                correctAnswer: 0,
+                explanation: "Treinar uma vez por semana pode trazer benefícios pequenos, como melhora no humor e circulação."
+            },
+            {
+                id: 10,
+                question: "É melhor fazer 10 minutos de exercício todo dia ou 1 hora só no fim de semana?",
+                options: ["10 minutos diários", "1 hora semanal", "Ambos são iguais", "Nenhum é eficaz"],
+                correctAnswer: 0,
+                explanation: "10 minutos diários são mais eficazes para criar hábitos e manter consistência na saúde."
+            },
+            {
+                id: 11,
+                question: "Comer granola com açúcar refinado ainda é uma escolha saudável?",
+                options: ["Sim, é nutritiva", "Não, devido ao açúcar", "Depende da quantidade", "Melhor que doces"],
+                correctAnswer: 1,
+                explanation: "Granola com açúcar refinado perde benefícios saudáveis devido ao alto teor de açúcar."
+            },
+            {
+                id: 12,
+                question: "Por que dietas extremamente restritivas costumam falhar a longo prazo?",
+                options: ["Falta de nutrientes", "São difíceis de manter", "Causam lesões", "Aumentam o peso"],
+                correctAnswer: 1,
+                explanation: "Dietas restritivas são difíceis de manter, levando à desistência e efeito sanfona."
+            },
+            {
+                id: 13,
+                question: "Comer alimentos 'sem glúten' é saudável para todos ou só para quem tem intolerância?",
+                options: ["Para todos", "Só com intolerância", "Depende da dieta", "É prejudicial"],
+                correctAnswer: 1,
+                explanation: "Sem glúten só é necessário para quem tem intolerância ou celíacos; para outros, não há benefício."
+            },
+            {
+                id: 14,
+                question: "Qual hábito é mais eficaz para emagrecer: cortar o jantar ou controlar porções?",
+                options: ["Cortar o jantar", "Controlar porções", "Ambos igualmente", "Nenhum funciona"],
+                correctAnswer: 1,
+                explanation: "Controlar porções é mais sustentável e eficaz para manter um déficit calórico."
+            },
+            {
+                id: 15,
+                question: "Comer fruta à noite engorda mais do que durante o dia?",
+                options: ["Sim, engorda", "Não, é igual", "Depende da fruta", "Só se for muito"],
+                correctAnswer: 1,
+                explanation: "O horário não afeta; o que importa é o total de calorias consumidas ao longo do dia."
+            },
+            {
+                id: 16,
+                question: "Trocar suco de fruta por refrigerante zero é realmente uma boa escolha?",
+                options: ["Sim, é melhor", "Não, ambos são ruins", "Depende da quantidade", "Suco é pior"],
+                correctAnswer: 1,
+                explanation: "Refrigerante zero e suco têm problemas; água ou frutas inteiras são escolhas melhores."
+            },
+            {
+                id: 17,
+                question: "Por que alimentos integrais são mais indicados do que os refinados?",
+                options: ["Mais fibras", "Menos calorias", "Mais sabor", "Mais baratos"],
+                correctAnswer: 0,
+                explanation: "Integrais têm mais fibras, nutrientes e promovem saciedade, ao contrário dos refinados."
+            },
+            {
+                id: 18,
+                question: "Beber água somente quando sente sede é suficiente para se hidratar bem?",
+                options: ["Sim, é suficiente", "Não, precisa mais", "Depende do clima", "Só para jovens"],
+                correctAnswer: 1,
+                explanation: "Sede já indica desidratação; beber água regularmente é essencial para boa hidratação."
+            },
+            {
+                id: 19,
+                question: "Comer proteína em todas as refeições é necessário mesmo para quem não malha?",
+                options: ["Sim, sempre", "Não, depende", "Apenas para atletas", "É prejudicial"],
+                correctAnswer: 1,
+                explanation: "Proteína é importante, mas a quantidade varia conforme estilo de vida e objetivos."
+            },
+            {
+                id: 20,
+                question: "Qual alimento tem mais açúcar: iogurte de fruta industrializado ou barra de chocolate?",
+                options: ["Iogurte", "Chocolate", "Ambos iguais", "Depende da marca"],
+                correctAnswer: 0,
+                explanation: "Iogurtes industrializados podem ter mais açúcar devido a adoçantes adicionados."
+            },
+            {
+                id: 21,
+                question: "Dormir menos durante a semana e compensar no fim de semana tem o mesmo efeito?",
+                options: ["Sim, compensa", "Não, é pior", "Depende da idade", "Só para jovens"],
+                correctAnswer: 1,
+                explanation: "Compensar sono não restaura completamente os efeitos negativos da privação crônica."
+            },
+            {
+                id: 22,
+                question: "Por que a qualidade do sono importa tanto quanto a quantidade?",
+                options: ["Melhora humor", "Ciclos completos", "Menos sonhos", "Mais energia"],
+                correctAnswer: 1,
+                explanation: "Ciclos completos de sono profundo e REM são essenciais para recuperação e saúde mental."
+            },
+            {
+                id: 23,
+                question: "Qual o impacto de usar telas antes de dormir na produção de melatonina?",
+                options: ["Aumenta", "Reduz", "Não afeta", "Depende da tela"],
+                correctAnswer: 1,
+                explanation: "Luz azul das telas reduz a produção de melatonina, dificultando o sono."
+            },
+            {
+                id: 24,
+                question: "É verdade que dormir após o almoço prejudica a digestão?",
+                options: ["Sim, sempre", "Não, é mito", "Depende da refeição", "Só em idosos"],
+                correctAnswer: 1,
+                explanation: "Dormir após o almoço não prejudica a digestão; pode até ajudar na regulação hormonal."
+            },
+            {
+                id: 25,
+                question: "Um ambiente totalmente silencioso é sempre melhor para dormir?",
+                options: ["Sim, ideal", "Não, varia", "Só para crianças", "Depende do hábito"],
+                correctAnswer: 1,
+                explanation: "Algumas pessoas dormem melhor com ruído branco; silêncio total não é universal."
+            },
+            {
+                id: 26,
+                question: "Lavar as mãos com frequência pode prejudicar a barreira natural da pele?",
+                options: ["Sim, pode", "Não, nunca", "Apenas com sabão", "Só em crianças"],
+                correctAnswer: 0,
+                explanation: "Lavar excessivamente pode remover óleos naturais, ressecando a pele."
+            },
+            {
+                id: 27,
+                question: "O uso diário de desinfetantes pode afetar a imunidade?",
+                options: ["Sim, reduz", "Não, fortalece", "Não afeta", "Depende do tipo"],
+                correctAnswer: 0,
+                explanation: "Desinfetantes excessivos podem reduzir a exposição a micróbios benéficos, afetando a imunidade."
+            },
+            {
+                id: 28,
+                question: "Por que não devemos compartilhar toalhas, mesmo com a família?",
+                options: ["Transmite bactérias", "Não há risco", "Só se molhada", "Por higiene pessoal"],
+                correctAnswer: 0,
+                explanation: "Toalhas podem transmitir bactérias e fungos, mesmo entre familiares."
+            },
+            {
+                id: 29,
+                question: "É verdade que banho excessivo pode ressecar a pele e tirar sua proteção natural?",
+                options: ["Sim, pode", "Não, é mito", "Só com água quente", "Depende da pele"],
+                correctAnswer: 0,
+                explanation: "Banhos excessivos, especialmente com água quente, removem óleos naturais da pele."
+            },
+            {
+                id: 30,
+                question: "Usar desodorante antitranspirante todos os dias faz mal?",
+                options: ["Sim, sempre", "Não, é seguro", "Depende da marca", "Só em excesso"],
+                correctAnswer: 1,
+                explanation: "Antitranspirantes são geralmente seguros, mas podem causar irritação em peles sensíveis."
+            },
+            {
+                id: 31,
+                question: "Por que se expor ao sol no início da manhã é benéfico?",
+                options: ["Aumenta vitamina D", "Melhora o humor", "Regula o sono", "Todos acima"],
+                correctAnswer: 3,
+                explanation: "Sol matinal aumenta vitamina D, melhora o humor e regula o ritmo circadiano."
+            },
+            {
+                id: 32,
+                question: "Qual a relação entre saúde bucal e doenças cardíacas?",
+                options: ["Nenhuma", "Inflamação", "Aumenta colesterol", "Reduz imunidade"],
+                correctAnswer: 1,
+                explanation: "Má saúde bucal pode causar inflamação, aumentando o risco de doenças cardíacas."
+            },
+            {
+                id: 33,
+                question: "Beber com moderação é sempre seguro para o fígado?",
+                options: ["Sim, sempre", "Não, depende", "Só para jovens", "Não, nunca"],
+                correctAnswer: 1,
+                explanation: "Moderação reduz riscos, mas fatores como saúde hepática influenciam a segurança."
+            },
+            {
+                id: 34,
+                question: "Tomar suplementos vitamínicos sem necessidade pode trazer riscos?",
+                options: ["Sim, pode", "Não, é seguro", "Só em idosos", "Depende da dose"],
+                correctAnswer: 0,
+                explanation: "Suplementos em excesso podem causar toxicidade ou desequilíbrios no corpo."
+            },
+            {
+                id: 35,
+                question: "Por que a automedicação com anti-inflamatórios é perigosa?",
+                options: ["Causa vício", "Dano renal", "Aumenta peso", "Reduz imunidade"],
+                correctAnswer: 1,
+                explanation: "Anti-inflamatórios podem causar danos renais e gástricos se usados sem orientação."
+            },
+            {
+                id: 36,
+                question: "Fazer exercícios físicos pode ajudar em quadros leves de depressão?",
+                options: ["Sim, pode", "Não, inútil", "Só com terapia", "Depende da idade"],
+                correctAnswer: 0,
+                explanation: "Exercícios liberam endorfinas, ajudando a aliviar sintomas de depressão."
+            },
+            {
+                id: 37,
+                question: "Qual hábito tem maior impacto na saúde mental: meditar ou evitar redes sociais?",
+                options: ["Meditar", "Evitar redes", "Ambos iguais", "Nenhum ajuda"],
+                correctAnswer: 0,
+                explanation: "Meditar reduz estresse e melhora foco, com impacto direto na saúde mental."
+            },
+            {
