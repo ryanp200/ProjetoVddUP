@@ -56,7 +56,7 @@
         #back-button,
         #next-button,
         #restart-button {
-            display: inline-block;
+            cursor: not-allowed;
         }
 
         .correct {
@@ -741,7 +741,7 @@
             currentQuestionIndex = 0;
             score = 0;
             userAnswers = Array(currentQuestions.length).fill(null);
-            $("#score").text(Acertos: ${score} / 70);
+            $("#score").text(`Acertos: ${score} / ${questions.length}`);
             $("#back-button").hide();
             $("#next-button").hide();
             $("#restart-button").hide();
@@ -750,7 +750,7 @@
 
         function displayQuestion() {
             const question = currentQuestions[currentQuestionIndex];
-            $("#question-text").text(${currentQuestionIndex + 1}. ${question.question});
+            $("#question-text").text(`${currentQuestionIndex + 1}. ${question.question}`);
             $("#opcoes-resposta-container button").removeClass("correct incorrect").prop("disabled", false);
             $("#feedback").text("");
 
@@ -762,12 +762,12 @@
                 const selectedIndex = userAnswers[currentQuestionIndex];
                 $("#opcoes-resposta-container button").prop("disabled", true);
                 if (selectedIndex === question.correctAnswer) {
-                    $("#feedback").html(<span style="color: green;'>Correct!</span>);
-                    $(#opcoes-resposta-container button:eq(${selectedIndex})).addClass("correct");
+                    $("#feedback").html(`<span style="color: green;">Correct!</span>`);
+                    $(`#opcoes-resposta-container button:eq(${selectedIndex})`).addClass("correct");
                 } else {
-                    $("#feedback").html(Errado! ${question.explanation}<br><strong>Resposta correta:</strong> ${question.options[question.correctAnswer]});
-                    $(#opcoes-resposta-container button:eq(${selectedIndex})).addClass("incorrect");
-                    $(#opcoes-resposta-container button:eq(${question.correctAnswer})).addClass("correct");
+                    $("#feedback").html(`Errado! ${question.explanation}<br><strong>Resposta correta:</strong> ${question.options[question.correctAnswer]}`);
+                    $(`#opcoes-resposta-container button:eq(${selectedIndex})`).addClass("incorrect");
+                    $(`#opcoes-resposta-container button:eq(${question.correctAnswer})`).addClass("correct");
                 }
             }
 
@@ -783,15 +783,15 @@
 
             if (selectedIndex === question.correctAnswer) {
                 score++;
-                $("#feedback").html(<span style='color: green;'>Correct!</span>);
-                $(#opcoes-resposta-container button:eq(${selectedIndex})).addClass("correct");
+                $("#feedback").html(`<span style='color: green;'>Correct!</span>`);
+                $(`#opcoes-resposta-container button:eq(${selectedIndex})`).addClass("correct");
             } else {
-                $("#feedback").html(Errado! ${question.explanation}<br><strong>Resposta correta:</strong> ${question.options[question.correctAnswer]});
-                $(#opcoes-resposta-container button:eq(${selectedIndex})).addClass("incorrect");
-                $(#opcoes-resposta-container button:eq(${question.correctAnswer})).addClass("correct");
+                $("#feedback").html(`Errado! ${question.explanation}<br><strong>Resposta correta:</strong> ${question.options[question.correctAnswer]}`);
+                $(`#opcoes-resposta-container button:eq(${selectedIndex})`).addClass("incorrect");
+                $(`#opcoes-resposta-container button:eq(${question.correctAnswer})`).addClass("correct");
             }
 
-            $("#score").text(Acertos: ${score} / 70);
+            $("#score").text(`Acertos: ${score} / ${questions.length}`);
             $("#next-button").toggle(currentQuestionIndex < currentQuestions.length - 1);
             $("#restart-button").toggle(currentQuestionIndex === currentQuestions.length - 1);
         }
@@ -809,7 +809,7 @@
             $("#next-button").click(() => {
                 if (currentQuestionIndex < currentQuestions.length - 1) {
                     currentQuestionIndex++;
-                    displayQuestion()
+                    displayQuestion();
                 }
             });
 
