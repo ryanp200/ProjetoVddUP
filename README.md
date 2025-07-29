@@ -1,29 +1,30 @@
-# Projeto: Senso Comum e seus Impactos na Saúde Física
+# Projeto: Patrimônios Culturais – Torre Eiffel
 
-Repositório do projeto da disciplina **Laboratório de Mediação e Intervenção Sociocultural**.
+Repositório do projeto da disciplina **Artes**.
 
-Este trabalho teve como foco discutir e refletir sobre o tema:
+Este trabalho teve como objetivo explorar e apresentar a importância dos patrimônios culturais, com foco na:
 
-## 🧠 Senso Comum e seus Impactos na Saúde Física
+## 🗼 Torre Eiffel – Um Patrimônio Cultural Mundial
 
-O grupo investigou como o senso comum pode influenciar práticas relacionadas à saúde física, abordando exemplos do cotidiano e os efeitos dessas crenças na vida das pessoas.
+O grupo escolheu como tema a Torre Eiffel, símbolo icônico da França e exemplo de patrimônio histórico, arquitetônico e cultural.  
+A proposta foi desenvolver uma apresentação multimídia, composta por um **vídeo informativo** e um **site interativo**, com o intuito de destacar a história, relevância e curiosidades sobre esse monumento.
 
 ---
 
 ## 👥 Alunos
 
-- Pedro Augusto Braz  
-- Rafael Carvalho  
-- Ryan Peres  
-- Samuel Neves  
-- Yasmim Camargo  
+- Matheus Prancha Barbosa 
+- Rafael Carvalho da Silva  
+- Ryan Aparecido Peres  
+- Samuel da Silva Neves
+- Pedro Augusto de Carvalho Braz
 
 ## 👩‍🏫 Professora
 
-**Débora Queiroz**
+**Graciela**
 
 ---
 
 📍 **ETEC de Santa Isabel**  
-📅 **Ano letivo: 2025**  
-💻 **Curso: 2º Mtec Informática para Internet**
+📅 **Ano letivo: 2024**  
+💻 **Curso: 1º Mtec Informática para Internet**
